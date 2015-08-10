@@ -1,0 +1,15 @@
+.photo-wall ul {
+	list-style-type: none;
+	margin: 0 ;
+	padding: 0;
+}
+.photo-wall li {
+	display: inline-block;
+	margin: 10px;
+}
+.photo-wall li img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	vertical-align:middle;
+}
