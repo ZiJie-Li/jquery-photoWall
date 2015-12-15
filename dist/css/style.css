@@ -5,11 +5,11 @@
 }
 .photo-wall li {
 	display: inline-block;
-	margin: 10px;
+	margin: 5px;
 }
 .photo-wall li img {
 	width: 100%;
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 	vertical-align:middle;
 }

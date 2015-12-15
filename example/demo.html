@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>photoWall</title>
+    <link rel="stylesheet" href="../dist/css/animate.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="demo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../dist/js/jquery-photoWall.min.js"></script>
+    <script>
+    $(function() {
+        var pw = $('#photoWall').photoWall({
+                speed: 5000,
+                imgHeight: 'auto',
+                showMax: 6,
+                loopSpeed: 3,
+                effect: 'zoomIn'
+            }),
+            data = pw.data('photoWall');
+
+        $('#control').click(function() {
+            var state = $(this).text();
+            if (state == "stop") {
+                data.stop();
+                $(this).text('play');
+            } else {
+                data.rePlay();
+                $(this).text('stop');
+            }
+        });
+        $('#refresh').click(function() {
+            data.refresh();
+            $('#control').text('stop');
+        });
+
+        $(window).resize(function() {
+            if ($(window).width() < 768) {
+                data.reset({
+                    oneLineMaxLength: 2
+                });
+            }
+            else {
+            	data.reset({
+                    oneLineMaxLength: 3
+                });
+            }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div class="button-box">
+        <button id="control">stop</button>
+        <button id="refresh">refresh</button>
+    </div>
+    <div id="photoWall">
+        <ul>
+            <li><img src="photo/n_1.jpg" border="0" /></li>
+            <li><img src="photo/n_2.jpg" border="0" /></li>
+            <li><img src="photo/n_3.jpg" border="0" /></li>
+            <li><img src="photo/n_4.jpg" border="0" /></li>
+            <li><img src="photo/n_5.jpg" border="0" /></li>
+            <li><img src="photo/n_6.jpg" border="0" /></li>
+            <li><img src="photo/n_8.jpg" border="0" /></li>
+        </ul>
+    </div>
+</body>
+
+</html>
