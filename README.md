@@ -5,6 +5,7 @@ version 2.0.0
 
 # How to use
 
+```html
 <!--include css-->
 <link rel="stylesheet" href="animate.css">
 <link rel="stylesheet" href="style.css">
@@ -12,6 +13,7 @@ version 2.0.0
 <!--include js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="jquery-photoWall.js"></script>
+
 
 <!--content-->
 <div id="photoWall">
@@ -31,10 +33,11 @@ version 2.0.0
         $('#photoWall').photoWall();
     });
 </script>
-
+```
 
 # Options
 
+```javascript
 _this.options = {
 	imgWidth : 0, //set img width
 	imgHeight : 0, //set img height or auto
@@ -52,3 +55,4 @@ _this.options = {
 	autoplay : true, // enable autoplay on initialisation
 	fluid : true // is it a percentage width? (boolean) RWD
 };
+```
